@@ -4,9 +4,8 @@ package com.example.demoBooks;
 import javax.persistence.*;
 
 @Entity(name ="Book")
-@Table(name = "book"
+@Table(name = "book")
      //  , uniqueConstraint = {@UniqueConstraint(name ="author_email_unique", columnNames = "author_email")}
-        )
 public class Book {
 
     @Id
@@ -31,7 +30,7 @@ public class Book {
     @Column(name="author_email",
             nullable = false,
             columnDefinition = "TEXT",
-            unique = true )
+            unique = false )//true!!!!! bez duplikatów
     private String authorEmail;
 
     @Column(name="age_of_book",
